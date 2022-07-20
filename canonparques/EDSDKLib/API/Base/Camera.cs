@@ -179,6 +179,14 @@ namespace EOSDigital.API
         /// </summary>
         private bool useFilmingPcLv = false;
 
+        private string _dateCapture;
+
+        public string DateCapture { get => _dateCapture; set => _dateCapture = value; }
+
+        private string _timeCapture;
+
+        public string TimeCapture { get => _timeCapture; set => _timeCapture = value; }
+
         #endregion
 
         #region Init/Open/Close/Dispose
@@ -556,13 +564,17 @@ namespace EOSDigital.API
         /// <exception cref="CameraSessionException">Session is closed</exception>
         /// <exception cref="SDKStateException">Canon SDK is not initialized</exception>
         /// <exception cref="ArgumentNullException">The DownloadInfo is null</exception>
-        public void DownloadFile(DownloadInfo Info, string directory)
+        public void DownloadFile(DownloadInfo Info, string directory, string barcode)
         {
-            CheckState();
+            CheckState(); 
             if (Info == null) throw new ArgumentNullException(nameof(Info));
             if (directory == null || string.IsNullOrEmpty(directory.Trim())) directory = ".";
 
-            string currentFile = Path.Combine(directory, Info.FileName);
+            DateCapture = DateTime.Now.ToString("ddMMyyyy");
+            TimeCapture = DateTime.Now.ToString("hhmmss");
+
+            string currentFile = Path.Combine(directory, Info.FileName = $"{barcode}{DateCapture}{TimeCapture}.jpg" );
+
             if (!Directory.Exists(directory)) Directory.CreateDirectory(directory);
             DownloadToFile(Info, currentFile);
         }

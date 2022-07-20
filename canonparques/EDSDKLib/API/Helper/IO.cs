@@ -29,6 +29,8 @@ namespace EOSDigital.API
         /// <see cref="Camera.DownloadFile(DownloadInfo)"/> or
         /// <see cref="Camera.DownloadFile(DownloadInfo, string)"/> method.
         /// </summary>
+       
+
         public string FileName
         {
             get { return dirInfo.FileName; }
@@ -325,6 +327,9 @@ namespace EOSDigital.API
         /// <param name="filepath">Path to the file</param>
         /// <param name="createDisposition">State how to create the stream</param>
         /// <param name="access">File access type</param>
+        
+
+
         public SDKStream(string filepath, FileCreateDisposition createDisposition, FileAccess access)
         {
             if (filepath == null) throw new ArgumentNullException(nameof(filepath));

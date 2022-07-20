@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using EOSDigital.API;
 using EOSDigital.SDK;
 using System.IO;
+using System.Configuration;
 
 namespace ConfiguracionCamaraWindows
 {
@@ -39,12 +40,12 @@ namespace ConfiguracionCamaraWindows
                 APIHandler.CameraAdded += APIHandler_CameraAdded;
                 ErrorHandler.SevereErrorHappened += ErrorHandler_SevereErrorHappened;
                 ErrorHandler.NonSevereErrorHappened += ErrorHandler_NonSevereErrorHappened;
-                SavePathTextBox.Text = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyPictures), "RemotePhoto");
                 SaveFolderBrowser.Description = "Save Images To...";
                 LiveViewPicBox.Paint += LiveViewPicBox_Paint;
                 LVBw = LiveViewPicBox.Width;
                 LVBh = LiveViewPicBox.Height;
                 RefreshCamera();
+                SavePhoto();
                 IsInit = true;
             }
             catch (DllNotFoundException) { ReportError("Canon DLLs not found!", true); }
@@ -101,8 +102,9 @@ namespace ConfiguracionCamaraWindows
             try
             {
                 string dir = null;
-                Invoke((Action)delegate { dir = SavePathTextBox.Text; });
-                sender.DownloadFile(Info, dir);
+
+                Invoke((Action)delegate { dir = ConfigurationManager.AppSettings["directorioFotos"]; });
+                sender.DownloadFile(Info, dir, this.BarcodeTextBox.Text);
                 Invoke((Action)delegate { MainProgressBar.Value = 0; });
             }
             catch (Exception ex) { ReportError(ex.Message, false); }
@@ -138,27 +140,17 @@ namespace ConfiguracionCamaraWindows
 
         #region Settings
 
-        private void TakePhotoButton_Click(object sender, EventArgs e)
+        private void BarcodeTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            try
+            if (e.KeyChar == (char)Keys.Enter)
             {
-                if ((string)TvCoBox.SelectedItem == "Bulb") MainCamera.TakePhotoBulbAsync((int)BulbUpDo.Value);
-                else MainCamera.TakePhotoShutterAsync();
-            }
-            catch (Exception ex) { ReportError(ex.Message, false); }
-        }
-
-        private void BrowseButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (Directory.Exists(SavePathTextBox.Text)) SaveFolderBrowser.SelectedPath = SavePathTextBox.Text;
-                if (SaveFolderBrowser.ShowDialog() == DialogResult.OK)
+                try
                 {
-                    SavePathTextBox.Text = SaveFolderBrowser.SelectedPath;
+                    if ((string)TvCoBox.SelectedItem == "Bulb") MainCamera.TakePhotoBulbAsync((int)BulbUpDo.Value);
+                    else MainCamera.TakePhotoShutterAsync();
                 }
+                catch (Exception ex) { ReportError(ex.Message, false); }
             }
-            catch (Exception ex) { ReportError(ex.Message, false); }
         }
 
         private void AvCoBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -193,27 +185,14 @@ namespace ConfiguracionCamaraWindows
             catch (Exception ex) { ReportError(ex.Message, false); }
         }
 
-        private void SaveToRdButton_CheckedChanged(object sender, EventArgs e)
+        private void SavePhoto()
         {
             try
             {
                 if (IsInit)
                 {
-                    if (STCameraRdButton.Checked)
-                    {
-                        MainCamera.SetSetting(PropertyID.SaveTo, (int)SaveTo.Camera);
-                        BrowseButton.Enabled = false;
-                        SavePathTextBox.Enabled = false;
-                    }
-                    else
-                    {
-                        if (STComputerRdButton.Checked) MainCamera.SetSetting(PropertyID.SaveTo, (int)SaveTo.Host);
-                        else if (STBothRdButton.Checked) MainCamera.SetSetting(PropertyID.SaveTo, (int)SaveTo.Both);
-
-                        MainCamera.SetCapacity(4096, int.MaxValue);
-                        BrowseButton.Enabled = true;
-                        SavePathTextBox.Enabled = true;
-                    }
+                    MainCamera.SetSetting(PropertyID.SaveTo, (int)SaveTo.Host);
+                    MainCamera.SetCapacity(4096, int.MaxValue);
                 }
             }
             catch (Exception ex) { ReportError(ex.Message, false); }
