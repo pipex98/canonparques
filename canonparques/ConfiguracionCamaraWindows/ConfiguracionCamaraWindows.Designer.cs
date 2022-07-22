@@ -123,7 +123,7 @@ namespace ConfiguracionCamaraWindows
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(188, 20);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 16);
+            this.label4.Size = new System.Drawing.Size(55, 16);
             this.label4.TabIndex = 3;
             this.label4.Text = "Bulb (s):";
             // 
@@ -133,7 +133,7 @@ namespace ConfiguracionCamaraWindows
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(17, 92);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(33, 16);
+            this.label3.Size = new System.Drawing.Size(32, 16);
             this.label3.TabIndex = 3;
             this.label3.Text = "ISO:";
             // 
@@ -178,7 +178,7 @@ namespace ConfiguracionCamaraWindows
             this.SessionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SessionLabel.Location = new System.Drawing.Point(6, 16);
             this.SessionLabel.Name = "SessionLabel";
-            this.SessionLabel.Size = new System.Drawing.Size(115, 16);
+            this.SessionLabel.Size = new System.Drawing.Size(114, 16);
             this.SessionLabel.TabIndex = 8;
             this.SessionLabel.Text = "Sin sesión abierta";
             // 
@@ -199,7 +199,7 @@ namespace ConfiguracionCamaraWindows
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(17, 56);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(27, 16);
+            this.label2.Size = new System.Drawing.Size(26, 16);
             this.label2.TabIndex = 3;
             this.label2.Text = "Tv:";
             // 
@@ -252,7 +252,7 @@ namespace ConfiguracionCamaraWindows
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(17, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(27, 16);
+            this.label1.Size = new System.Drawing.Size(26, 16);
             this.label1.TabIndex = 3;
             this.label1.Text = "Av:";
             // 
@@ -358,7 +358,7 @@ namespace ConfiguracionCamaraWindows
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.label5.Location = new System.Drawing.Point(188, 63);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(98, 16);
+            this.label5.Size = new System.Drawing.Size(97, 16);
             this.label5.TabIndex = 10;
             this.label5.Text = "Codigo Barras:";
             // 
@@ -368,7 +368,7 @@ namespace ConfiguracionCamaraWindows
             this.BarcodeTextBox.Name = "BarcodeTextBox";
             this.BarcodeTextBox.Size = new System.Drawing.Size(101, 20);
             this.BarcodeTextBox.TabIndex = 9;
-            this.BarcodeTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.BarcodeTextBox_KeyPress);
+            this.BarcodeTextBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.BarcodeTextBox_KeyUp);
             // 
             // SaveFolderBrowser
             // 

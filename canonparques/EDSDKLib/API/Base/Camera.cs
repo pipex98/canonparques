@@ -564,7 +564,7 @@ namespace EOSDigital.API
         /// <exception cref="CameraSessionException">Session is closed</exception>
         /// <exception cref="SDKStateException">Canon SDK is not initialized</exception>
         /// <exception cref="ArgumentNullException">The DownloadInfo is null</exception>
-        public void DownloadFile(DownloadInfo Info, string directory, string barcode)
+        public void DownloadFile(DownloadInfo Info, string directory )
         {
             CheckState(); 
             if (Info == null) throw new ArgumentNullException(nameof(Info));
@@ -573,9 +573,9 @@ namespace EOSDigital.API
             DateCapture = DateTime.Now.ToString("ddMMyyyy");
             TimeCapture = DateTime.Now.ToString("hhmmss");
 
-            string currentFile = Path.Combine(directory, Info.FileName = $"{barcode}{DateCapture}{TimeCapture}.jpg" );
+            string currentFile = Path.Combine(directory, Info.FileName = $"{DateCapture}{TimeCapture}.jpg" );
 
-            if (!Directory.Exists(directory)) Directory.CreateDirectory(directory);
+            if (!Directory.Exists(directory)) Directory.CreateDirectory(directory) ;
             DownloadToFile(Info, currentFile);
         }
 

@@ -45,7 +45,6 @@ namespace ConfiguracionCamaraWindows
                 LVBw = LiveViewPicBox.Width;
                 LVBh = LiveViewPicBox.Height;
                 RefreshCamera();
-                SavePhoto();
                 IsInit = true;
             }
             catch (DllNotFoundException) { ReportError("Canon DLLs not found!", true); }
@@ -103,8 +102,8 @@ namespace ConfiguracionCamaraWindows
             {
                 string dir = null;
 
-                Invoke((Action)delegate { dir = ConfigurationManager.AppSettings["directorioFotos"]; });
-                sender.DownloadFile(Info, dir, this.BarcodeTextBox.Text);
+                Invoke((Action)delegate { dir = $"{Path.GetDirectoryName(Path.GetDirectoryName(System.IO.Directory.GetCurrentDirectory()))}/Fotos"; });
+                sender.DownloadFile(Info, dir);
                 Invoke((Action)delegate { MainProgressBar.Value = 0; });
             }
             catch (Exception ex) { ReportError(ex.Message, false); }
@@ -140,18 +139,26 @@ namespace ConfiguracionCamaraWindows
 
         #region Settings
 
-        private void BarcodeTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        private void BarcodeTextBox_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyChar == (char)Keys.Enter)
             {
                 try
                 {
-                    if ((string)TvCoBox.SelectedItem == "Bulb") MainCamera.TakePhotoBulbAsync((int)BulbUpDo.Value);
-                    else MainCamera.TakePhotoShutterAsync();
+                    if (e.KeyCode == Keys.Enter)
+                    {
+                        if ((string)TvCoBox.SelectedItem == "Bulb") {
+                            MainCamera.TakePhotoBulbAsync((int)BulbUpDo.Value);
+                        } else
+                        {
+                            MainCamera.TakePhotoShutterAsync(); 
+                        }
+                        e.Handled = true;
+                    }
                 }
                 catch (Exception ex) { ReportError(ex.Message, false); }
             }
         }
+
 
         private void AvCoBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -323,6 +330,7 @@ namespace ConfiguracionCamaraWindows
                 MainCamera.ProgressChanged += MainCamera_ProgressChanged;
                 MainCamera.StateChanged += MainCamera_StateChanged;
                 MainCamera.DownloadReady += MainCamera_DownloadReady;
+                SavePhoto();
 
                 SessionButton.Text = "Close Session";
                 SessionLabel.Text = MainCamera.DeviceName;
