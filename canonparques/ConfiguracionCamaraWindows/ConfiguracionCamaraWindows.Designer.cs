@@ -55,7 +55,6 @@ namespace ConfiguracionCamaraWindows
             this.SettingsGroupBox = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.BarcodeTextBox = new System.Windows.Forms.TextBox();
-            this.SaveFolderBrowser = new System.Windows.Forms.FolderBrowserDialog();
             ((System.ComponentModel.ISupportInitialize)(this.LiveViewPicBox)).BeginInit();
             this.InitGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BulbUpDo)).BeginInit();
@@ -66,9 +65,10 @@ namespace ConfiguracionCamaraWindows
             // FocusNear1Button
             // 
             this.FocusNear1Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FocusNear1Button.Location = new System.Drawing.Point(243, 20);
+            this.FocusNear1Button.Location = new System.Drawing.Point(324, 25);
+            this.FocusNear1Button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.FocusNear1Button.Name = "FocusNear1Button";
-            this.FocusNear1Button.Size = new System.Drawing.Size(28, 23);
+            this.FocusNear1Button.Size = new System.Drawing.Size(37, 28);
             this.FocusNear1Button.TabIndex = 6;
             this.FocusNear1Button.Text = "<";
             this.FocusNear1Button.UseVisualStyleBackColor = true;
@@ -76,17 +76,19 @@ namespace ConfiguracionCamaraWindows
             // 
             // MainProgressBar
             // 
-            this.MainProgressBar.Location = new System.Drawing.Point(6, 127);
+            this.MainProgressBar.Location = new System.Drawing.Point(8, 156);
+            this.MainProgressBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MainProgressBar.Name = "MainProgressBar";
-            this.MainProgressBar.Size = new System.Drawing.Size(387, 20);
+            this.MainProgressBar.Size = new System.Drawing.Size(516, 25);
             this.MainProgressBar.TabIndex = 8;
             // 
             // FocusNear3Button
             // 
             this.FocusNear3Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FocusNear3Button.Location = new System.Drawing.Point(175, 20);
+            this.FocusNear3Button.Location = new System.Drawing.Point(233, 25);
+            this.FocusNear3Button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.FocusNear3Button.Name = "FocusNear3Button";
-            this.FocusNear3Button.Size = new System.Drawing.Size(28, 23);
+            this.FocusNear3Button.Size = new System.Drawing.Size(37, 28);
             this.FocusNear3Button.TabIndex = 6;
             this.FocusNear3Button.Text = "<<<";
             this.FocusNear3Button.UseVisualStyleBackColor = true;
@@ -98,9 +100,10 @@ namespace ConfiguracionCamaraWindows
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LiveViewPicBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.LiveViewPicBox.Location = new System.Drawing.Point(10, 51);
+            this.LiveViewPicBox.Location = new System.Drawing.Point(13, 63);
+            this.LiveViewPicBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.LiveViewPicBox.Name = "LiveViewPicBox";
-            this.LiveViewPicBox.Size = new System.Drawing.Size(524, 349);
+            this.LiveViewPicBox.Size = new System.Drawing.Size(698, 429);
             this.LiveViewPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.LiveViewPicBox.TabIndex = 1;
             this.LiveViewPicBox.TabStop = false;
@@ -109,9 +112,10 @@ namespace ConfiguracionCamaraWindows
             // 
             // LiveViewButton
             // 
-            this.LiveViewButton.Location = new System.Drawing.Point(8, 20);
+            this.LiveViewButton.Location = new System.Drawing.Point(11, 25);
+            this.LiveViewButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.LiveViewButton.Name = "LiveViewButton";
-            this.LiveViewButton.Size = new System.Drawing.Size(70, 22);
+            this.LiveViewButton.Size = new System.Drawing.Size(93, 27);
             this.LiveViewButton.TabIndex = 2;
             this.LiveViewButton.Text = "Iniciar LV";
             this.LiveViewButton.UseVisualStyleBackColor = true;
@@ -121,9 +125,10 @@ namespace ConfiguracionCamaraWindows
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(188, 20);
+            this.label4.Location = new System.Drawing.Point(251, 25);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 16);
+            this.label4.Size = new System.Drawing.Size(74, 20);
             this.label4.TabIndex = 3;
             this.label4.Text = "Bulb (s):";
             // 
@@ -131,9 +136,10 @@ namespace ConfiguracionCamaraWindows
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(17, 92);
+            this.label3.Location = new System.Drawing.Point(23, 113);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 16);
+            this.label3.Size = new System.Drawing.Size(42, 20);
             this.label3.TabIndex = 3;
             this.label3.Text = "ISO:";
             // 
@@ -143,9 +149,11 @@ namespace ConfiguracionCamaraWindows
             this.InitGroupBox.Controls.Add(this.CameraListBox);
             this.InitGroupBox.Controls.Add(this.SessionLabel);
             this.InitGroupBox.Controls.Add(this.SessionButton);
-            this.InitGroupBox.Location = new System.Drawing.Point(12, 13);
+            this.InitGroupBox.Location = new System.Drawing.Point(16, 16);
+            this.InitGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.InitGroupBox.Name = "InitGroupBox";
-            this.InitGroupBox.Size = new System.Drawing.Size(135, 158);
+            this.InitGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.InitGroupBox.Size = new System.Drawing.Size(180, 194);
             this.InitGroupBox.TabIndex = 15;
             this.InitGroupBox.TabStop = false;
             this.InitGroupBox.Text = "Camaras";
@@ -154,9 +162,10 @@ namespace ConfiguracionCamaraWindows
             // 
             this.RefreshButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.RefreshButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RefreshButton.Location = new System.Drawing.Point(96, 127);
+            this.RefreshButton.Location = new System.Drawing.Point(128, 156);
+            this.RefreshButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.RefreshButton.Name = "RefreshButton";
-            this.RefreshButton.Size = new System.Drawing.Size(31, 23);
+            this.RefreshButton.Size = new System.Drawing.Size(41, 28);
             this.RefreshButton.TabIndex = 9;
             this.RefreshButton.Text = "↻";
             this.RefreshButton.UseVisualStyleBackColor = true;
@@ -167,27 +176,31 @@ namespace ConfiguracionCamaraWindows
             this.CameraListBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.CameraListBox.FormattingEnabled = true;
-            this.CameraListBox.Location = new System.Drawing.Point(8, 35);
+            this.CameraListBox.ItemHeight = 16;
+            this.CameraListBox.Location = new System.Drawing.Point(11, 43);
+            this.CameraListBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CameraListBox.Name = "CameraListBox";
-            this.CameraListBox.Size = new System.Drawing.Size(121, 82);
+            this.CameraListBox.Size = new System.Drawing.Size(160, 100);
             this.CameraListBox.TabIndex = 6;
             // 
             // SessionLabel
             // 
             this.SessionLabel.AutoSize = true;
             this.SessionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SessionLabel.Location = new System.Drawing.Point(6, 16);
+            this.SessionLabel.Location = new System.Drawing.Point(8, 20);
+            this.SessionLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SessionLabel.Name = "SessionLabel";
-            this.SessionLabel.Size = new System.Drawing.Size(114, 16);
+            this.SessionLabel.Size = new System.Drawing.Size(143, 20);
             this.SessionLabel.TabIndex = 8;
             this.SessionLabel.Text = "Sin sesión abierta";
             // 
             // SessionButton
             // 
             this.SessionButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.SessionButton.Location = new System.Drawing.Point(6, 127);
+            this.SessionButton.Location = new System.Drawing.Point(8, 156);
+            this.SessionButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.SessionButton.Name = "SessionButton";
-            this.SessionButton.Size = new System.Drawing.Size(84, 23);
+            this.SessionButton.Size = new System.Drawing.Size(112, 28);
             this.SessionButton.TabIndex = 7;
             this.SessionButton.Text = "Abrir Sesión";
             this.SessionButton.UseVisualStyleBackColor = true;
@@ -197,15 +210,17 @@ namespace ConfiguracionCamaraWindows
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(17, 56);
+            this.label2.Location = new System.Drawing.Point(23, 69);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(26, 16);
+            this.label2.Size = new System.Drawing.Size(32, 20);
             this.label2.TabIndex = 3;
             this.label2.Text = "Tv:";
             // 
             // BulbUpDo
             // 
-            this.BulbUpDo.Location = new System.Drawing.Point(266, 20);
+            this.BulbUpDo.Location = new System.Drawing.Point(355, 25);
+            this.BulbUpDo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BulbUpDo.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -217,7 +232,7 @@ namespace ConfiguracionCamaraWindows
             0,
             0});
             this.BulbUpDo.Name = "BulbUpDo";
-            this.BulbUpDo.Size = new System.Drawing.Size(127, 20);
+            this.BulbUpDo.Size = new System.Drawing.Size(169, 22);
             this.BulbUpDo.TabIndex = 1;
             this.BulbUpDo.Value = new decimal(new int[] {
             30,
@@ -229,18 +244,20 @@ namespace ConfiguracionCamaraWindows
             // 
             this.ISOCoBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ISOCoBox.FormattingEnabled = true;
-            this.ISOCoBox.Location = new System.Drawing.Point(53, 91);
+            this.ISOCoBox.Location = new System.Drawing.Point(71, 112);
+            this.ISOCoBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ISOCoBox.Name = "ISOCoBox";
-            this.ISOCoBox.Size = new System.Drawing.Size(117, 21);
+            this.ISOCoBox.Size = new System.Drawing.Size(155, 24);
             this.ISOCoBox.TabIndex = 0;
             this.ISOCoBox.SelectedIndexChanged += new System.EventHandler(this.ISOCoBox_SelectedIndexChanged);
             // 
             // FocusNear2Button
             // 
             this.FocusNear2Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FocusNear2Button.Location = new System.Drawing.Point(209, 20);
+            this.FocusNear2Button.Location = new System.Drawing.Point(279, 25);
+            this.FocusNear2Button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.FocusNear2Button.Name = "FocusNear2Button";
-            this.FocusNear2Button.Size = new System.Drawing.Size(28, 23);
+            this.FocusNear2Button.Size = new System.Drawing.Size(37, 28);
             this.FocusNear2Button.TabIndex = 6;
             this.FocusNear2Button.Text = "<<";
             this.FocusNear2Button.UseVisualStyleBackColor = true;
@@ -250,9 +267,10 @@ namespace ConfiguracionCamaraWindows
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(17, 23);
+            this.label1.Location = new System.Drawing.Point(23, 28);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(26, 16);
+            this.label1.Size = new System.Drawing.Size(33, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "Av:";
             // 
@@ -260,18 +278,20 @@ namespace ConfiguracionCamaraWindows
             // 
             this.TvCoBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.TvCoBox.FormattingEnabled = true;
-            this.TvCoBox.Location = new System.Drawing.Point(53, 55);
+            this.TvCoBox.Location = new System.Drawing.Point(71, 68);
+            this.TvCoBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TvCoBox.Name = "TvCoBox";
-            this.TvCoBox.Size = new System.Drawing.Size(117, 21);
+            this.TvCoBox.Size = new System.Drawing.Size(155, 24);
             this.TvCoBox.TabIndex = 0;
             this.TvCoBox.SelectedIndexChanged += new System.EventHandler(this.TvCoBox_SelectedIndexChanged);
             // 
             // FocusFar3Button
             // 
             this.FocusFar3Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FocusFar3Button.Location = new System.Drawing.Point(345, 20);
+            this.FocusFar3Button.Location = new System.Drawing.Point(460, 25);
+            this.FocusFar3Button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.FocusFar3Button.Name = "FocusFar3Button";
-            this.FocusFar3Button.Size = new System.Drawing.Size(28, 23);
+            this.FocusFar3Button.Size = new System.Drawing.Size(37, 28);
             this.FocusFar3Button.TabIndex = 6;
             this.FocusFar3Button.Text = ">>>";
             this.FocusFar3Button.UseVisualStyleBackColor = true;
@@ -280,9 +300,10 @@ namespace ConfiguracionCamaraWindows
             // FocusFar2Button
             // 
             this.FocusFar2Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FocusFar2Button.Location = new System.Drawing.Point(311, 20);
+            this.FocusFar2Button.Location = new System.Drawing.Point(415, 25);
+            this.FocusFar2Button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.FocusFar2Button.Name = "FocusFar2Button";
-            this.FocusFar2Button.Size = new System.Drawing.Size(28, 23);
+            this.FocusFar2Button.Size = new System.Drawing.Size(37, 28);
             this.FocusFar2Button.TabIndex = 6;
             this.FocusFar2Button.Text = ">>";
             this.FocusFar2Button.UseVisualStyleBackColor = true;
@@ -302,9 +323,11 @@ namespace ConfiguracionCamaraWindows
             this.LiveViewGroupBox.Controls.Add(this.LiveViewPicBox);
             this.LiveViewGroupBox.Controls.Add(this.LiveViewButton);
             this.LiveViewGroupBox.Enabled = false;
-            this.LiveViewGroupBox.Location = new System.Drawing.Point(12, 177);
+            this.LiveViewGroupBox.Location = new System.Drawing.Point(16, 218);
+            this.LiveViewGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.LiveViewGroupBox.Name = "LiveViewGroupBox";
-            this.LiveViewGroupBox.Size = new System.Drawing.Size(548, 411);
+            this.LiveViewGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LiveViewGroupBox.Size = new System.Drawing.Size(731, 506);
             this.LiveViewGroupBox.TabIndex = 16;
             this.LiveViewGroupBox.TabStop = false;
             this.LiveViewGroupBox.Text = "Vista en vivo";
@@ -312,9 +335,10 @@ namespace ConfiguracionCamaraWindows
             // FocusFar1Button
             // 
             this.FocusFar1Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FocusFar1Button.Location = new System.Drawing.Point(277, 20);
+            this.FocusFar1Button.Location = new System.Drawing.Point(369, 25);
+            this.FocusFar1Button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.FocusFar1Button.Name = "FocusFar1Button";
-            this.FocusFar1Button.Size = new System.Drawing.Size(28, 23);
+            this.FocusFar1Button.Size = new System.Drawing.Size(37, 28);
             this.FocusFar1Button.TabIndex = 6;
             this.FocusFar1Button.Text = ">";
             this.FocusFar1Button.UseVisualStyleBackColor = true;
@@ -324,9 +348,10 @@ namespace ConfiguracionCamaraWindows
             // 
             this.AvCoBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.AvCoBox.FormattingEnabled = true;
-            this.AvCoBox.Location = new System.Drawing.Point(53, 22);
+            this.AvCoBox.Location = new System.Drawing.Point(71, 27);
+            this.AvCoBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.AvCoBox.Name = "AvCoBox";
-            this.AvCoBox.Size = new System.Drawing.Size(117, 21);
+            this.AvCoBox.Size = new System.Drawing.Size(155, 24);
             this.AvCoBox.TabIndex = 0;
             this.AvCoBox.SelectedIndexChanged += new System.EventHandler(this.AvCoBox_SelectedIndexChanged);
             // 
@@ -344,10 +369,12 @@ namespace ConfiguracionCamaraWindows
             this.SettingsGroupBox.Controls.Add(this.TvCoBox);
             this.SettingsGroupBox.Controls.Add(this.AvCoBox);
             this.SettingsGroupBox.Enabled = false;
-            this.SettingsGroupBox.Location = new System.Drawing.Point(153, 13);
-            this.SettingsGroupBox.MinimumSize = new System.Drawing.Size(407, 158);
+            this.SettingsGroupBox.Location = new System.Drawing.Point(204, 16);
+            this.SettingsGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SettingsGroupBox.MinimumSize = new System.Drawing.Size(543, 194);
             this.SettingsGroupBox.Name = "SettingsGroupBox";
-            this.SettingsGroupBox.Size = new System.Drawing.Size(407, 158);
+            this.SettingsGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SettingsGroupBox.Size = new System.Drawing.Size(543, 194);
             this.SettingsGroupBox.TabIndex = 17;
             this.SettingsGroupBox.TabStop = false;
             this.SettingsGroupBox.Text = "Ajustes";
@@ -356,32 +383,31 @@ namespace ConfiguracionCamaraWindows
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label5.Location = new System.Drawing.Point(188, 63);
+            this.label5.Location = new System.Drawing.Point(251, 78);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(97, 16);
+            this.label5.Size = new System.Drawing.Size(122, 20);
             this.label5.TabIndex = 10;
             this.label5.Text = "Codigo Barras:";
             // 
             // BarcodeTextBox
             // 
-            this.BarcodeTextBox.Location = new System.Drawing.Point(292, 62);
+            this.BarcodeTextBox.Location = new System.Drawing.Point(389, 76);
+            this.BarcodeTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BarcodeTextBox.Name = "BarcodeTextBox";
-            this.BarcodeTextBox.Size = new System.Drawing.Size(101, 20);
+            this.BarcodeTextBox.Size = new System.Drawing.Size(133, 22);
             this.BarcodeTextBox.TabIndex = 9;
             this.BarcodeTextBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.BarcodeTextBox_KeyUp);
             // 
-            // SaveFolderBrowser
-            // 
-            this.SaveFolderBrowser.Description = "Save Images To...";
-            // 
             // ConfiguracionCamaraWindows
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(572, 600);
+            this.ClientSize = new System.Drawing.Size(763, 738);
             this.Controls.Add(this.InitGroupBox);
             this.Controls.Add(this.LiveViewGroupBox);
             this.Controls.Add(this.SettingsGroupBox);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ConfiguracionCamaraWindows";
             this.Text = "Configuracion Camara Windows";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ConfiguracionCamaraWindows_FormClosing);
@@ -424,7 +450,6 @@ namespace ConfiguracionCamaraWindows
         private System.Windows.Forms.GroupBox SettingsGroupBox;
         private System.Windows.Forms.TextBox BarcodeTextBox;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.FolderBrowserDialog SaveFolderBrowser;
     }
 }
 

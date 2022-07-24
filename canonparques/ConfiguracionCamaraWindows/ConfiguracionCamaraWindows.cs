@@ -40,7 +40,6 @@ namespace ConfiguracionCamaraWindows
                 APIHandler.CameraAdded += APIHandler_CameraAdded;
                 ErrorHandler.SevereErrorHappened += ErrorHandler_SevereErrorHappened;
                 ErrorHandler.NonSevereErrorHappened += ErrorHandler_NonSevereErrorHappened;
-                SaveFolderBrowser.Description = "Save Images To...";
                 LiveViewPicBox.Paint += LiveViewPicBox_Paint;
                 LVBw = LiveViewPicBox.Width;
                 LVBh = LiveViewPicBox.Height;

@@ -179,14 +179,6 @@ namespace EOSDigital.API
         /// </summary>
         private bool useFilmingPcLv = false;
 
-        private string _dateCapture;
-
-        public string DateCapture { get => _dateCapture; set => _dateCapture = value; }
-
-        private string _timeCapture;
-
-        public string TimeCapture { get => _timeCapture; set => _timeCapture = value; }
-
         #endregion
 
         #region Init/Open/Close/Dispose
@@ -570,10 +562,10 @@ namespace EOSDigital.API
             if (Info == null) throw new ArgumentNullException(nameof(Info));
             if (directory == null || string.IsNullOrEmpty(directory.Trim())) directory = ".";
 
-            DateCapture = DateTime.Now.ToString("ddMMyyyy");
-            TimeCapture = DateTime.Now.ToString("hhmmss");
+            string dateCapture = DateTime.Now.ToString("ddMMyyyy");
+            string timeCapture = DateTime.Now.ToString("hhmmss");
 
-            string currentFile = Path.Combine(directory, Info.FileName = $"{DateCapture}{TimeCapture}.jpg" );
+            string currentFile = Path.Combine(directory, Info.FileName = $"{dateCapture}{timeCapture}.jpg" );
 
             if (!Directory.Exists(directory)) Directory.CreateDirectory(directory) ;
             DownloadToFile(Info, currentFile);
