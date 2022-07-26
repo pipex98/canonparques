@@ -565,7 +565,7 @@ namespace EOSDigital.API
             string dateCapture = DateTime.Now.ToString("ddMMyyyy");
             string timeCapture = DateTime.Now.ToString("hhmmss");
 
-            string currentFile = Path.Combine(directory, Info.FileName = $"{dateCapture}{timeCapture}.jpg" );
+            string currentFile = Path.Combine(directory, Info.FileName = $"{CamRef}-{dateCapture}{timeCapture}.jpg" );
 
             if (!Directory.Exists(directory)) Directory.CreateDirectory(directory) ;
             DownloadToFile(Info, currentFile);

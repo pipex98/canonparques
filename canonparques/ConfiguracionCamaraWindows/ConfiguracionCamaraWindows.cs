@@ -1,17 +1,15 @@
 ﻿using EOSDigital.API;
+using EOSDigital.SDK;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Windows.Forms;
-using EOSDigital.API;
-using EOSDigital.SDK;
 using System.IO;
-using System.Configuration;
+using System.Windows.Forms;
 
 namespace ConfiguracionCamaraWindows
 {
     public partial class ConfiguracionCamaraWindows : Form
-    { 
+    {
         #region Variables
 
         CanonAPI APIHandler;
@@ -145,11 +143,13 @@ namespace ConfiguracionCamaraWindows
                 {
                     if (e.KeyCode == Keys.Enter)
                     {
-                        if ((string)TvCoBox.SelectedItem == "Bulb") {
-                            MainCamera.TakePhotoBulbAsync((int)BulbUpDo.Value);
-                        } else
+                        if ((string)TvCoBox.SelectedItem == "Bulb")
                         {
-                            MainCamera.TakePhotoShutterAsync(); 
+                            MainCamera.TakePhotoBulbAsync((int)BulbUpDo.Value);
+                        }
+                        else
+                        {
+                            MainCamera.TakePhotoShutterAsync();
                         }
                         e.Handled = true;
                     }
